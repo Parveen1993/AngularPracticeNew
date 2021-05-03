@@ -1,0 +1,156 @@
+.searchSectionPopUp {
+    border-radius: 6px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #4dbfed;
+    box-shadow: 0px 0px 20px 0px rgba(77, 191, 237, 0.31);
+    padding: 10px;
+
+    &__close {
+        position: absolute;
+        right: 15px;
+        top: 9px;
+        width: 20px;
+        height: 20px;
+
+        &::before, &::after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 17px;
+            width: 2px;
+            background-color: $color-grey-02;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        padding: 15px 0px;
+        border-bottom: 1px solid #dfdfdf;
+    }
+
+    .searchField {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .searchData {
+        &__button {
+            &.topNav {
+                background-color: #1de9b6;
+                height: 38px;
+                width: 38px;
+                display: block;
+                border-radius: 100%;
+                margin: 10px auto;
+                position: relative;
+                cursor: pointer;
+
+                &::after {
+                    content: "";
+                    left: 12px;
+                    top: 14px;
+                    width: 14px;
+                    height: 14px;
+                    border: solid #fff;
+                    border-width: 0 2px 2px 0px;
+                    -webkit-transform: rotate(-135deg);
+                    -ms-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
+                    position: absolute;
+                }
+            }
+
+            &.bottomNav {
+                background-color: #1de9b6;
+                height: 38px;
+                width: 38px;
+                display: block;
+                border-radius: 100%;
+                margin: 10px auto;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    left: 12px;
+                    top: 10px;
+                    width: 14px;
+                    height: 14px;
+                    border: solid #fff;
+                    border-width: 0 2px 2px 0px;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    position: absolute;
+                }
+            }
+        }
+
+        ul {
+            margin: 0;
+            width: 100%;
+            padding: 0px;
+            max-height: 300px;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 7px;
+                border-radius: 10px;
+                background-color: #ededed;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: #ededed;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #4dbfed;
+                border-radius: 10px;
+            }
+
+            li {
+                font-size: 20px;
+                padding: 5px 0;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.1s ease;
+
+                &:hover {
+                    font-size: 30px;
+                    background: #f6fcfe;
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+}
+
+autoSearch {
+    width: 100%;
+}
+
+.searchSectionPos {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    width: 91%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    left: 50%;
+
+    @include media("mobile") {
+        position: fixed;
+    }
+}

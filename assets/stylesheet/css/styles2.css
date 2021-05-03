@@ -1,0 +1,236 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+html {
+  -webkit-text-size-adjust: 100%; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */ }
+
+.dialog[_ngcontent-c0] {
+  position: absolute !important; }
+
+html {
+  height: 100%; }
+
+body {
+  background: #FFF;
+  font-family: roboto;
+  color: #1d1f24;
+  font-size: 14px;
+  height: 100%;
+  image-rendering: -webkit-optimize-contrast; }
+
+.carDetails {
+  width: 100%;
+  border: 2px solid #57c0ed;
+  border-radius: 12px;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  overflow: hidden;
+  color: #0E4783; }
+  .carDetails .carLogo {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    border: 2px solid #57c0ed;
+    border-radius: 12px 0 0 12px;
+    width: 31%;
+    margin: -2px -2px; }
+    .carDetails .carLogo img {
+      margin: auto; }
+  .carDetails .carInfo {
+    width: 71%; }
+    .carDetails .carInfo ul {
+      display: -webkit-box;
+      display: flex;
+      padding: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 0 0 0 2px;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row; }
+      .carDetails .carInfo ul:nth-child(2n) {
+        background-color: #eff5fd; }
+      .carDetails .carInfo ul li {
+        font-size: 12px;
+        list-style: none;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 0px; }
+        .carDetails .carInfo ul li:nth-child(2n) {
+          -webkit-box-pack: end;
+                  justify-content: flex-end; }
+
+.cjMain__mainWrapper {
+  -webkit-box-flex: 0;
+          flex: 0 0 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 100%; }
+  .cjMain__mainWrapperHeader {
+    padding: 10px 15px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 0;
+            flex: 0 0 calc(100% - 200px);
+    flex-basis: calc(100% - 200px);
+    max-width: calc(100% - 200px); }
+    @media (max-width: 813px) {
+      .cjMain__mainWrapperHeader {
+        flex-basis: 100%;
+        max-width: 100%;
+        height: 70px;
+        border-bottom: 1px solid #dfdfdf; } }
+    .cjMain__mainWrapperHeader .cjMainContainer {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+      padding: 5px 0px;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-flex: 0;
+              flex: 0 0 100%;
+      max-width: 100%; }
+      @media (max-width: 813px) {
+        .cjMain__mainWrapperHeader .cjMainContainer {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+                  flex-direction: row;
+          position: relative;
+          padding: 10px 0px; } }
+    .cjMain__mainWrapperHeader--logo {
+      text-align: left;
+      -webkit-box-flex: 0;
+              flex: 0 0 52%; }
+      @media (max-width: 813px) {
+        .cjMain__mainWrapperHeader--logo img {
+          max-width: 150px; } }
+    .cjMain__mainWrapperHeader--title {
+      font-size: 40px;
+      color: #666666;
+      font-weight: 500; }
+      @media (max-width: 1200px) {
+        .cjMain__mainWrapperHeader--title {
+          font-size: 25px; } }
+      @media (max-width: 813px) {
+        .cjMain__mainWrapperHeader--title {
+          font-size: 26px;
+          padding: 10px 0;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 70px;
+          width: 100%;
+          text-align: center;
+          border-top: 1px solid #dfdfdf;
+          font-weight: 600;
+          display: none; } }
+      @media (max-width: 813px) {
+        .cjMain__mainWrapperHeader--title h1 {
+          display: none; } }
+
+.contactUs {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  border: 1px solid #49bff0;
+  border-radius: 30px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 5px 0px;
+  text-decoration: none;
+  color: #666;
+  position: relative;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center; }
+  @media (max-width: 813px) {
+    .contactUs {
+      padding: 0px 2px 0px 0px;
+      height: 34px;
+      line-height: 34px; } }
+  .contactUs__content {
+    padding: 0px 10px;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500; }
+    @media (max-width: 813px) {
+      .contactUs__content {
+        font-size: 12px; } }
+  .contactUs__icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #49bff0 url(../img/plane-contact-icon.png) no-repeat center center; }
+
+/*# sourceMappingURL=styles2.css.map */

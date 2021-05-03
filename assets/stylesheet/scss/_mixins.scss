@@ -1,0 +1,42 @@
+$breakpoints: 
+("tiny-mobile": (max-width: 320px), 
+"very-small": (max-width: 375px), 
+"small-mobile": (max-width: 414px),
+ "mobile": (max-width: 813px),
+ "large-tablet": (max-width: 1024px), 
+ "small-desktop": (max-width: 1200px), 
+ "tug": (max-width: 1570px), 
+ "laptop": (max-width: 1366px)) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+
+@mixin media($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin backImg($image, $bgPos: 0 0) {
+    background: url($image);
+    background-repeat: no-repeat;
+    background-position: $bgPos;
+}
+
+@mixin size($width, $height) {
+    width: $width + px;
+    height: $height + px;
+}
+
+@mixin sizePer($width, $height) {
+    width: $width + "%";
+    height: $height + "%";
+}

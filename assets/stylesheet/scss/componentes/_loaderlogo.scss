@@ -1,0 +1,45 @@
+.loader-bg {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+  
+  .loadergif {
+    background-image: url(../img/loader.gif);
+    width: 110px;
+    height: 101px;
+    margin: auto;
+    right: 0;
+    top: 0;
+    position: relative;
+  }
+  
+  .loader-bg .loader-box {
+    position: relative;
+    top: 40%;
+    p {
+      font-size: 16px;
+      padding: 10px 0;
+      font-family: arial;
+      color: #f4f4f4;
+    }
+    .loader {
+      border: 6px solid #ababab;
+      border-radius: 50%;
+      border-top: 5px solid #00a1c4;
+      width: 80px;
+      height: 80px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+      margin: auto;
+    }
+  }

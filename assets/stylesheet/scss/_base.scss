@@ -1,0 +1,60 @@
+html {height: 100%;}
+
+body {
+    background: $color-white;
+    font-family: roboto;
+    color: $color-grey-01;
+    font-size: 14px;
+    height: 100%;
+    image-rendering: -webkit-optimize-contrast;
+    
+
+}
+.carDetails {
+    width: 100%;
+    border: 2px solid #57c0ed;
+    border-radius: 12px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    color: #0E4783;
+    .carLogo {
+      display: flex;
+      align-items: center;
+      border: 2px solid #57c0ed;
+      border-radius: 12px 0 0 12px;
+      width: 31%;
+      margin: -2px -2px;
+      img {
+        margin: auto;
+      }
+    }
+    .carInfo {
+      width: 71%;
+      ul {
+        display: flex;
+        padding: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0 0 0 2px;
+        flex-direction: row;
+        &:nth-child(2n) {
+          background-color: #eff5fd;
+        }
+        li {
+          font-size: 12px;
+          list-style: none;
+          text-transform: uppercase;
+          width: 100%;
+          padding: 0px;
+          &:nth-child(2n) {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+
+
+

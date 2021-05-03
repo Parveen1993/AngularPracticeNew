@@ -1,0 +1,165 @@
+/* Help Right Section*/
+.cjSectionHelp {
+    flex: 0 0 20%;
+    max-width: 20%;
+    height: calc(100% - 96px);
+    background: #f6fcfe;
+
+
+    @include media("mobile") {
+        flex-basis:auto;
+        max-width: 100%;
+        border-top: 1px solid #e0f6ff;
+        position: fixed;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+        z-index: 10;
+    }
+}
+
+.rightSection {
+    width: 100%;
+    height: 100%;
+    background: $color-blue-03;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media("mobile") {
+        
+    }
+
+
+    &__fiveStepsQuestions {
+        text-align: center;
+        width: 100%;
+
+        .watchIcon {
+            margin: 20px 0;
+
+            img {
+                width: 100px;
+            }
+        }
+        .helpIcon {
+            margin: 20px 0;
+
+            img {
+                max-width: 250px;
+                width:100%
+            }
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #49bff0;
+            padding: 20px 0;
+
+            span {
+                border-bottom: 2px solid #49bff0;
+                display: inline-block;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 1.2em;
+            padding: 10px 0px;
+        }
+
+        @include media("mobile") {
+            display: none;
+        }
+    }
+
+    .shildIcon {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        
+
+        @include media("mobile") {
+            margin: 0;
+            flex-direction: row;
+
+            img {
+                margin-right: 20px;
+                width: 35px;
+            }
+
+            
+        }
+
+
+        p.shildTextforDesktop {
+            font-size: 13px;
+            line-height: 1.2em;
+            padding: 10px 0px;
+            text-align: center;
+            width: 100%;
+
+            @include media("mobile") {
+                display: none;
+            }
+        }
+
+        .shildTextForMobile {
+            display: none;
+
+            @include media("mobile") {
+                display: inline-block;
+
+                a.closeIcon {
+                    width: 20px;
+                    height: 20px;
+                    background: #fff;
+                    border-radius: 100%;
+                    display: inline-block;
+                    position: absolute;
+                    right: -16px;
+                    text-decoration: none;
+                    top: -15px;
+
+                    &::after, &::before {
+                        position: absolute;
+                        left: 9px;
+                        content: ' ';
+                        height: 10px;
+                        width: 2px;
+                        background-color: rgb(102, 102, 102);
+                        top: 5px;
+                    }
+    
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+    
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+
+                }
+
+                h2 {
+                    font-size: 13px;
+                    font-weight: 500;
+                    padding: 5px 0;
+                }
+
+                p {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 1.2em;
+                }
+            }
+        }
+    }
+}
